@@ -16,4 +16,3 @@ document.getElementById("mostrarBtn").addEventListener("click", function() {
         this.textContent = "Mostrar Opções"; 
     }
 });
-
