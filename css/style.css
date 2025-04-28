@@ -49,7 +49,8 @@ body {
     align-items: center;     
     flex-grow: 1; /* Garante que ocupe o espaço disponível */
     margin: 0 auto;
-    margin-top: 90%; /* Evita sobreposição com o menu fixo */
+    margin-top: 70px; /* Ajustado para evitar sobreposição com o menu fixo */
+    max-width: 90%; /* Reduz margens laterais */
 }
 
 /* Estilos de conteúdo */
@@ -85,12 +86,11 @@ button {
 
 button:hover {
     background-color: rgba(255, 255, 255, 0.1); 
-    transform: scale(1.0);
+    transform: scale(1.05); /* Leve aumento no tamanho ao passar o mouse */
     box-shadow: 0 8px 16px rgba(255, 255, 255, 0.3); 
 }
 
-
-
+/* Animação de brilho */
 @keyframes brilho {
     0% { text-shadow: 0px 0px 5px red; }
     50% { text-shadow: 0px 0px 15px red; }
@@ -131,7 +131,6 @@ h3:hover {
     transform: scale(0.9); /* Leve aumento no tamanho para efeito visual */
 }
 
-
 /* Alerta com animação */
 @keyframes sirene {
     0% { color: red; }
@@ -147,61 +146,8 @@ h3:hover {
     animation: sirene 0.1s infinite alternate; 
 }
 
-/* Botões adicionais */
-.button-container {
-    display: none;
-    flex-direction: column;
-    align-items: center;
-    gap: 10px;
-}
-
-.button-container button {
-    display: block;
-    width: 200px;
-    padding: 10px;
-    font-size: 16px;
-    border: none;
-    background-color: #007bff;
-    color: white;
-    border-radius: 5px;
-    cursor: pointer;
-    margin-bottom: 15px;
-}
-
-#mostrarBtn {
-    position: fixed;
-    top: 10px;
-    left: 50%;
-    transform: translateX(-50%);
-    padding: 10px 20px;
-    background: linear-gradient(45deg, #007bff, #0056b3);
-    color: white;
-    border: none;
-    cursor: pointer;
-    font-size: 16px;
-    border-radius: 5px;
-}
-
-footer {
-    color: rgb(252, 250, 250);
-    animation: brilho 2s infinite alternate;
-    text-align: center;
-    padding: 10px;
-    position: relative;
-    margin-top: auto;
-}
-
-.overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
-    z-index: -1;
-}
-
-ul {
+/* Estilos para listas */
+ul, ol {
     list-style-type: none; /* Remove marcadores padrão */
     padding: 0;
     margin: 0;
@@ -220,6 +166,21 @@ ul > li {
 ul > li:hover {
     background-color: rgba(0, 0, 0, 0.9); /* Fundo mais escuro ao passar o mouse */
 }
+ol > li {
+    background-color: rgba(0, 0, 0, 0.7); /* Fundo preto semi-transparente */
+    color: white; /* Texto branco para contraste */
+    padding: 10px; /* Espaçamento interno */
+    margin: 5px 0; /* Espaçamento entre os itens */
+    border-radius: 5px; /* Bordas arredondadas para um visual mais elegante */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3); /* Sombra discreta */
+    transition: background-color 0.3s ease;
+}
+
+ol > li:hover {
+    background-color: rgba(0, 0, 0, 0.9); /* Fundo mais escuro ao passar o mouse */
+}
+
+/* Estilos para spans */
 span {
     background-color: rgba(0, 0, 0, 0.7); /* Fundo preto semi-transparente */
     color: white; /* Texto branco para contraste */
@@ -232,4 +193,25 @@ span {
 
 span:hover {
     background-color: rgba(0, 0, 0, 0.9); /* Fundo mais escuro ao passar o mouse */
+}
+
+/* Estilo do rodapé */
+footer {
+    color: rgb(252, 250, 250);
+    animation: brilho 2s infinite alternate;
+    text-align: center;
+    padding: 10px;
+    position: relative;
+    margin-top: auto;
+}
+
+/* Overlay de fundo */
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: -1;
 }
