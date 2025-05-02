@@ -230,6 +230,10 @@ footer {
 }
 
 @media screen and (max-width: 768px) {
+    .card {
+        width: 80%;
+        padding: 20px;
+    }
     .menu {
         flex-direction: row; /* Mantém os itens lado a lado */
         justify-content: center; /* Centraliza os itens */
@@ -244,6 +248,10 @@ footer {
 }
 
 @media screen and (max-width: 480px) {
+    .card {
+        width: 90%;
+        padding: 15px;
+    }
     .menu {
         flex-direction: row; /* Caso seja necessário, pode alternar para um menu em coluna */
         align-items: center;
