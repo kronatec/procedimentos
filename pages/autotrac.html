@@ -7,12 +7,21 @@
     <title>Autotrac</title>
 </head>
 <body>
-    <button onclick="window.location.href='../index.html'">Técnologias</button>
+    <button class="tech" onclick="window.location.href='../index.html'">Tecnologias</button>
 
     <div>
-        <h1>Introdução a Tecnologia Autotrac</h1>
+        <h1>Introdução à Tecnologia Autotrac</h1>
     </div>
 
+    <!-- Estrutura do Card -->
+    <div id="info-card" class="card">
+        <div class="card-content">
+            <span class="close">&times;</span>
+            <p id="card-text">Texto da informação aparecerá aqui.</p>
+        </div>
+    </div>
+
+    <!-- Seções com títulos clicáveis -->
     <div class="section">
         <h3 class="toggle">PONTUAÇÃO DE VIAGEM</h3>
         <ul class="content">
@@ -22,6 +31,7 @@
             <li>...57- PARADA PROGRAMADA / PF</li>
         </ul>
     </div>
+
     <div class="section">
         <h3 class="toggle">CADASTRO</h3>
         <span class="content">CLIQUE NA INFORMAÇÃO » EDITAR OBSERVAÇÃO DO VEÍCULO » SALVAR</span>
