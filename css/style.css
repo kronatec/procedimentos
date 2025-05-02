@@ -4,8 +4,8 @@ body {
     height: 100%;
     margin: 0;
     padding: 10px;
-    display: flex;
-    flex-direction: column;
+    /* display: flex; */
+    /*flex-direction: column;*/
     min-height: 100vh;
     background-image: url('../css/images/krona.jpg');
     background-repeat: no-repeat;
@@ -211,4 +211,14 @@ ul > li:hover, ol > li:hover, span:hover {
     0% { background-color: rgba(255, 0, 0, 0.5); }
     50% { background-color: rgba(255, 0, 0, 0.9); }
     100% { background-color: rgba(255, 0, 0, 0.5); }
+}
+
+footer {
+    background: #333;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
 }
