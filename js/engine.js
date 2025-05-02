@@ -1,9 +1,14 @@
 document.addEventListener("DOMContentLoaded", function() {
-    // Adiciona evento de clique a todos os elementos .toggle
     document.querySelectorAll(".toggle").forEach(h3 => {
         h3.addEventListener("click", function() {
             let card = document.getElementById("info-card");
             let text = document.getElementById("card-text");
+
+            // Remove a classe ativa de todos os elementos antes de aplicar a um novo
+            document.querySelectorAll(".toggle").forEach(el => el.classList.remove("ativo"));
+
+            // Adiciona a classe ao elemento clicado
+            this.classList.add("ativo");
 
             // Atualiza o conteúdo do card com a informação associada
             text.innerHTML = this.nextElementSibling.innerHTML;
@@ -17,11 +22,11 @@ document.addEventListener("DOMContentLoaded", function() {
     // Evento para fechar o card ao clicar no botão de fechar
     document.querySelector(".close").addEventListener("click", function() {
         let card = document.getElementById("info-card");
-        card.classList.remove("mostrar"); // Remove efeito deslizante
+        card.classList.remove("mostrar"); 
         
-        // Usa um timeout para ocultar após a animação
         setTimeout(() => {
             card.style.display = "none"; 
+            document.querySelectorAll(".toggle").forEach(el => el.classList.remove("ativo")); // Remove destaque do elemento ativo
         }, 400);
     });
 
@@ -33,6 +38,7 @@ document.addEventListener("DOMContentLoaded", function() {
             
             setTimeout(() => {
                 card.style.display = "none";
+                document.querySelectorAll(".toggle").forEach(el => el.classList.remove("ativo")); // Remove destaque
             }, 400);
         }
     });

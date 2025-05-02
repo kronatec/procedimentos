@@ -191,6 +191,13 @@ ul > li:hover, ol > li:hover, span:hover {
     opacity: 0;
     transition: opacity 0.3s ease-in-out;
 }
+.toggle.ativo {
+    background-color: #808080; /* Cinza */
+    color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+
 
 
 /* Estilo do alerta */
