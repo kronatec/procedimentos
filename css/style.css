@@ -105,6 +105,8 @@ h3:hover {
     border-radius: 15px;
     border: 1px solid rgba(255, 255, 255, 0.3);
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+    justify-content: center;
+    align-items: center;
     text-align: center;
     z-index: 2000;
     transform: translate(-50%, -50%) translateY(-30px);
@@ -123,11 +125,11 @@ h3:hover {
 
 /* Botão de fechar */
 .close {
-    position: relative;
-    bottom: 40px;
-    left: 350px;
-    width: 30px;
-    height: 30px;
+    position: absolute;
+    bottom: 70px;
+    left: 420px;
+    width: 10px;
+    height: 20px;
     font-size: 24px;
     cursor: pointer;
     color: white;
@@ -135,7 +137,7 @@ h3:hover {
     background: rgba(255, 255, 255, 0.3);
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content:center;
     border-radius: 50%;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
     z-index: 2100;
@@ -196,9 +198,6 @@ ul > li:hover, ol > li:hover, span:hover {
     color: white;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
 }
-
-
-
 
 /* Estilo do alerta */
 .alert {
