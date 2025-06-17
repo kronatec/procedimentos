@@ -153,31 +153,32 @@ h3:hover {
     z-index: 2100;
 }
 
-/* Estilização de botões */
-button {
-    position: fixed;
-    top: 10px;
-    left: 15px;
-    padding: 20px 100px; /* Diminuindo um pouco o tamanho */
-    font-size: 14px; /* Tornando o texto menor */
-    border: 2px solid rgba(255, 255, 255, 0.6);
-    border-radius: 8px;
-    background-color: rgba(0, 0, 0, 0.9);
-    color: white;
-    cursor: pointer;
-    transition: transform 0.2s ease, background-color 0.3s ease, box-shadow 0.3s ease;
-    box-shadow: 0 2px 4px rgba(255, 255, 255, 0.2);
+.botoes-container {
+    display: flex;
+    justify-content: center;
+    gap: 10px;               /* Espaço mínimo entre os botões */
+    flex-wrap: wrap;         /* Quebra linha se necessário */
+    padding: 8px 16px;       /* Reduzido para manter no topo sem muita margem */
+    margin-top: 40px;        /* Compensa a altura da barra .menu (40px) */
+    z-index: 1;
 }
 
+.botoes-container button {
+    padding: 15px 18px;             /* Menor altura e largura interna */
+    background-color: rgba(0, 0, 0, 0.85);
+    color: white;
+    font-size: 16px;               /* Texto menor */
+    border-radius: 4px;            /* Cantos menos arredondados */
+    flex: 0 0 auto;                /* Tamanho fixo conforme conteúdo */
+    width: auto;                  /* Não força largura */
+    min-width: 80px;              /* Largura mínima opcional */
+    max-width: 100%;
+}
 
-button:hover {
+.botoes-container button:hover {
     background-color: rgba(255, 255, 255, 0.1);
     transform: scale(1.05);
-    box-shadow: 0 8px 16px rgba(255, 255, 255, 0.3);
-}
-
-.checkList {
-    left: 30%;
+    box-shadow: 0 6px 12px rgba(255, 255, 255, 0.3);
 }
 
 .check {
