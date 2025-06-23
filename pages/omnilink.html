@@ -1,80 +1,82 @@
 <!DOCTYPE html>
 <html lang="pt">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../css/style.css">
-    <title>Omnilink</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <link rel="stylesheet" href="../css/style.css" />
+  <title>Omnilink</title>
 </head>
 <body>
-    <div class="botoes-container">
-        <button onclick="window.location.href='../index.html'">Tecnologias</button>
-        <button onclick="window.location.href='/procedimentos/pages/checkList/omnilink.html'">Check-List</button>
+  <div class="botoes-container">
+    <button class="menu-btn" onclick="window.location.href='../index.html'">Tecnologias</button>
+    <button class="menu-btn" onclick="window.location.href='/procedimentos/pages/checkList/omnilink.html'">
+      Check-List
+    </button>
+  </div>
+  
+  <div>
+    <h1 class="fade-in">Introdução à Tecnologia Omnilink</h1>
+  </div>
+  <div id="overlay" class="overlay"></div>
+  <!-- Estrutura do Card -->
+  <div id="info-card" class="card">
+    <div class="card-content">
+      <span class="close">&times;</span>
+      <p id="card-text">Texto da informação aparecerá aqui.</p>
     </div>
-    
-    <div>
-        <h1>Introdução à Tecnologia Omnilink</h1>
-    </div>
-       <!-- Estrutura do Card -->
-    <div id="info-card" class="card">
-        <div class="card-content">
-            <span class="close">&times;</span>
-            <p id="card-text">Texto da informação aparecerá aqui.</p>
-        </div>
-    </div>
+  </div>
 
-    <!-- Seções com títulos clicáveis -->
-    <div class="section">
-        <h3 class="toggle">PONTUAÇÃO DE VIAGEM</h3>
-        <ul class="content">
-            <li>*60 CLIENTE</li>
-            <li>**52 PERNOITE</li>
-            <li>***51 EM VIAGEM</li>
-            <li>****57 PARADA PROGRAMADA</li>
-            <li>@ Aguardando viagem</li>
-        </ul>
-    </div>
+  <!-- Seções com fade-in e títulos clicáveis -->
+  <div class="section fade-in">
+    <h3 class="toggle">PONTUAÇÃO DE VIAGEM</h3>
+    <ul class="content">
+      <li>*60 CLIENTE</li>
+      <li>**52 PERNOITE</li>
+      <li>***51 EM VIAGEM</li>
+      <li>****57 PARADA PROGRAMADA</li>
+      <li>@ Aguardando viagem</li>
+    </ul>
+  </div>
 
-    <div class="section">
-        <h3 class="toggle">INÍCIO DE VIAGEM OMNILINK</h3>
-        <ul class="content">
-            <li>BLOQUEAR » ATIVAR MODO INTERATIVO » &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;INÍCIO DE VIAGEM</li>
-            <li>BLOQUEAR » LACRAR BAÚ</li>
-            <li>BLOQUEAR » LACRAR CABINE</li>
-            <li>BLOQUEAR » LACRAR CARRETA</li>
-            <li>MENSAGEM LIVRE » LIBERADO KRONA</li>
-        </ul>
-    </div>
+  <div class="section fade-in">
+    <h3 class="toggle">INÍCIO DE VIAGEM OMNILINK</h3>
+    <ul class="content">
+      <li>BLOQUEAR » ATIVAR MODO INTERATIVO » INÍCIO DE VIAGEM</li>
+      <li>BLOQUEAR » LACRAR BAÚ</li>
+      <li>BLOQUEAR » LACRAR CABINE</li>
+      <li>BLOQUEAR » LACRAR CARRETA</li>
+      <li>MENSAGEM LIVRE » LIBERADO KRONA</li>
+    </ul>
+  </div>
 
-    <div class="section">
-        <h3 class="toggle">PERNOITE 🔑</h3>
-        <span class="content">BLOQUEAR » LACRAR MOTOR</span>
-    </div>
+  <div class="section fade-in">
+    <h3 class="toggle">PERNOITE 🔑</h3>
+    <span class="content">BLOQUEAR » LACRAR MOTOR</span>
+  </div>
 
-    <div class="section">
-        <h3 class="toggle">BANHEIRO / REFEIÇÃO</h3>
-        <span class="content">DESLACRAR CABINE » CONTATO COM O CONDUTOR</span>
-    </div>
+  <div class="section fade-in">
+    <h3 class="toggle">BANHEIRO / REFEIÇÃO</h3>
+    <span class="content">DESLACRAR CABINE » CONTATO COM O CONDUTOR</span>
+  </div>
 
-    <div class="section">
-        <h3 class="toggle">BLOQUEIO / DESBLOQUEIO</h3>
-        <ul class="content">
-            <li>BLOQUEIO » CONTATO COM O CONDUTOR</li>
-            <li>BLOQUEIO » DESBLOQUEIO » EM CONTATO COM O CONDUTOR</li>
-        </ul>
-    </div>
+  <div class="section fade-in">
+    <h3 class="toggle">BLOQUEIO / DESBLOQUEIO</h3>
+    <ul class="content">
+      <li>BLOQUEIO » CONTATO COM O CONDUTOR</li>
+      <li>BLOQUEIO » DESBLOQUEIO » EM CONTATO COM O CONDUTOR</li>
+    </ul>
+  </div>
 
-    <div class="section">
-        <h3 class="toggle">CHEGADA NO CLIENTE</h3>
-        <span class="content">BLOQUEIO » DESLACRAR BAÚ</span>
-    </div>
+  <div class="section fade-in">
+    <h3 class="toggle">CHEGADA NO CLIENTE</h3>
+    <span class="content">BLOQUEIO » DESLACRAR BAÚ</span>
+  </div>
 
-    <div class="section">
-        <h3 class="toggle">FIM DE VIAGEM</h3>
-        <span class="content">BLOQUEIO » DESATIVAR » FIM DE VIAGEM</span>
-    </div>
+  <div class="section fade-in">
+    <h3 class="toggle">FIM DE VIAGEM</h3>
+    <span class="content">BLOQUEIO » DESATIVAR » FIM DE VIAGEM</span>
+  </div>
 
-
-    <script src="../js/engine.js"></script>
+  <script src="../js/engine.js"></script>
 </body>
 </html>

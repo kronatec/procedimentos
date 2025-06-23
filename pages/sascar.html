@@ -1,88 +1,89 @@
 <!DOCTYPE html>
 <html lang="pt">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../css/style.css">
-    <title>Sascar</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/style.css" />
+  <title>Sascar</title>
 </head>
 <body>
-    <div class="botoes-container">
-        <button onclick="window.location.href='../index.html'">Tecnologias</button>
-    </div>
+  <div class="botoes-container">
+    <button class="menu-btn" onclick="window.location.href='../index.html'">Tecnologias</button>
+  </div>
 
-    <div>
-        <h1>Introdução à Tecnologia Sascar</h1>
+  <div>
+    <h1 class="fade-in">Introdução à Tecnologia Sascar</h1>
+  </div>
+  <div id="overlay" class="overlay"></div>
+  <!-- Estrutura do Card -->
+  <div id="info-card" class="card">
+    <div class="card-content">
+      <span class="close">&times;</span>
+      <p id="card-text">Texto da informação aparecerá aqui.</p>
     </div>
+  </div>
 
+  <!-- Seções com título clicável e fade-in -->
+  <div class="section fade-in">
+    <h3 class="toggle">PONTUAÇÃO DE VIAGEM</h3>
+    <ul class="content">
+      <li>..51 EM VIAGEM</li>
+      <li>..52 PERNOITE</li>
+      <li>&nbsp;.60 CHEGADA NO CLIENTE</li>
+      <li>...57 PARADA PROGRAMADA / PF</li>
+    </ul>
+  </div>
 
-    <!-- Estrutura do Card -->
-    <div id="info-card" class="card">
-        <div class="card-content">
-            <span class="close">&times;</span>
-            <p id="card-text">Texto da informação aparecerá aqui.</p>
-        </div>
-    </div>
+  <div class="section fade-in">
+    <h3 class="toggle">CADASTRO</h3>
+    <span class="content">Informações » Inserir nota 1</span>
+  </div>
 
-    <!-- Seções com títulos clicáveis -->
-    <div class="section">
-        <h3 class="toggle">PONTUAÇÃO DE VIAGEM</h3>
-        <ul class="content">
-            <li>..51 EM VIAGEM</li>
-            <li>..52 PERNOITE</li>
-            <li>&nbsp;.60 CHEGADA NO CLIENTE</li>
-            <li>...57 PARADA PROGRAMADA / PF</li>
-        </ul>
-    </div>
+  <div class="section fade-in">
+    <h3 class="toggle">INÍCIO DE VIAGEM SASCAR</h3>
+    <ul class="content">
+      <li>Atuação » Ativar trava de baú</li>
+      <li>Inibição » Desinibir todos sensores</li>
+      <li>Modo seguro atuadores » Ativar todas as saídas</li>
+      <li>Modo seguro sensores » Ativar todas as entradas</li>
+      <li>Mensagem livre: LIB KRONA</li>
+      <li>Início de operação</li>
+      <li>Fim de viagem é o reverso</li>
+    </ul>
+  </div>
 
-    <div class="section">
-        <h3 class="toggle">CADASTRO</h3>
-        <span class="content">Informações » Inserir nota 1</span>
-    </div>
+  <div class="section fade-in">
+    <h3 class="toggle">BLOQUEIO</h3>
+    <ul class="content">
+      <li>Atuação » Desativar bloqueio progressivo</li>
+      <li>Atuação » Desativar sirene</li>
+    </ul>
+  </div>
 
-    <div class="section">
-        <h3 class="toggle">INÍCIO DE VIAGEM SASCAR</h3>
-        <ul class="content">
-            <li>Atuação » Ativar trava de baú</li>
-            <li>Inibição » Desinibir todos sensores</li>
-            <li>Modo seguro atuadores » Ativar todas as saídas</li>
-            <li>Modo seguro sensores » Ativar todas as entradas</li>
-            <li>Mensagem livre: LIB KRONA</li>
-            <li>Início de operação</li>
-            <li>Fim de viagem é o reverso</li>
-        </ul>
-    </div>
+  <div class="section fade-in">
+    <h3 class="toggle">DESBLOQUEIO POR SENHA</h3>
+    <ul class="content">
+      <li>Dois cliques na placa &gt; Segurança de Atuação &gt;</li>
+      <li>Senha &gt; Digite senha gerada no teclado do condutor &gt;</li>
+      <li>Validar Senha &gt; Gerar senha &gt; Informar senha ao condutor</li>
+    </ul>
+  </div>
 
-    <div class="section">
-        <h3 class="toggle">BLOQUEIO</h3>
-        <ul class="content">
-            <li>Atuação » Desativar bloqueio progressivo</li>
-            <li>Atuação » Desativar sirene</li>
-        </ul>
-    </div>
-    <div class="section">
-        <h3 class="toggle">DESBLOQUEIO POR SENHA</h3>
-        <ul class="content">
-           <li>Dois cliques na placa > Segurança de Atuação > </li>
-           <li>Senha > Digite senha gerada no teclado do condutor ></li>
-           <li>Validar Senha > Gerar senha > Informar senha ao condutor</li>
-        </ul>
-    </div>
+  <div class="section fade-in">
+    <h3 class="toggle">PERDA DE SINAL</h3>
+    <ul class="content">
+      <li>Tempo de envio de posição » 1</li>
+      <li>Tempo de envio de posição ing desligada » 1</li>
+      <li>Requisitar posição</li>
+    </ul>
+  </div>
 
-    <div class="section">
-        <h3 class="toggle">PERDA DE SINAL</h3>
-        <ul class="content">
-            <li>Tempo de envio de posição » 1</li>
-            <li>Tempo de envio de posição ing desligada » 1</li>
-            <li>Requisitar posição</li>
-        </ul>
-    </div>
+  <div class="section fade-in">
+    <h3 class="toggle">Teclado em Alarme</h3>
+    <span class="content">Reset alarme mantendo perfil de segurança</span>
+  </div>
 
-    <div class="section">
-        <h3 class="toggle">Teclado em Alarme</h3>
-        <span class="content">Reset alarme mantendo perfil de segurança</span>
-    </div>
-
-    <script src="../js/engine.js"></script>
+  <script src="../js/engine.js" defer></script>
 </body>
 </html>

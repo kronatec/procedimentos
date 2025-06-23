@@ -1,66 +1,78 @@
 <!DOCTYPE html>
 <html lang="pt">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../css/style.css">
-    <title>Autotrac</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <link rel="stylesheet" href="../css/style.css" />
+  <title>Autotrac</title>
 </head>
 <body>
-    <div class="botoes-container">
-        <button class="tech" onclick="window.location.href='../index.html'">Tecnologias</button>
-    </div>
+  <div class="botoes-container">
+    <button class="menu-btn" onclick="window.location.href='../index.html'">
+      Tecnologias
+    </button>
+  </div>
 
-    <div>
-        <h1>Introdução à Tecnologia Autotrac</h1>
-    </div>
+  <div>
+    <h1 class="fade-in">Introdução à Tecnologia Autotrac</h1>
+  </div>
 
-    <!-- Estrutura do Card -->
-    <div id="info-card" class="card">
-        <div class="card-content">
-            <span class="close">&times;</span>
-            <p id="card-text">Texto da informação aparecerá aqui.</p>
-        </div>
+  <div id="overlay" class="overlay"></div>
+  <!-- Estrutura do Card -->
+  <div id="info-card" class="card">
+    <div class="card-content">
+      <span class="close">&times;</span>
+      <p id="card-text">Texto da informação aparecerá aqui.</p>
     </div>
+  </div>
 
-    <!-- Seções com títulos clicáveis -->
-    <div class="section">
-        <h3 class="toggle">PONTUAÇÃO DE VIAGEM</h3>
-        <ul class="content">
-            <li>..51 EM VIAGEM</li>
-            <li>..52 PERNOITE</li>
-            <li>.60 CHEGADA NO CLIENTE</li>
-            <li>...57 PARADA PROGRAMADA / PF</li>
-        </ul>
-    </div>
+  <!-- Seções com fade-in e títulos clicáveis -->
+  <div class="section fade-in">
+    <h3 class="toggle">PONTUAÇÃO DE VIAGEM</h3>
+    <ul class="content">
+      <li>..51 EM VIAGEM</li>
+      <li>..52 PERNOITE</li>
+      <li>.60 CHEGADA NO CLIENTE</li>
+      <li>...57 PARADA PROGRAMADA / PF</li>
+    </ul>
+  </div>
 
-    <div class="section">
-        <h3 class="toggle">CADASTRO</h3>
-        <span class="content">CLIQUE NA INFORMAÇÃO » EDITAR OBSERVAÇÃO DO VEÍCULO » SALVAR</span>
-    </div>
+  <div class="section fade-in">
+    <h3 class="toggle">CADASTRO</h3>
+    <span class="content">
+      CLIQUE NA INFORMAÇÃO » EDITAR OBSERVAÇÃO DO VEÍCULO » SALVAR
+    </span>
+  </div>
 
-    <div class="section">
-        <h3 class="toggle">COMANDO INÍCIO/FIM DE VIAGEM</h3>
-        <ul class="content">
-            <li>GERAL » ENVIAR COMANDO » 1 INÍCIO N3 (PR.CARN3+DESGT.N3+PR.BAUN3+PAINEL)</li>
-            <li>ENVIAR MENSAGEM » LIB KRONA</li>
-            <li>GERAL » ENVIAR COMANDO » 5 FIM DE VIAGEM (AUT.CAR+DEST.BAU+AUT.DSGT)</li>
-        </ul>
-    </div>
+  <div class="section fade-in">
+    <h3 class="toggle">COMANDO INÍCIO/FIM DE VIAGEM</h3>
+    <ul class="content">
+      <li>
+        GERAL » ENVIAR COMANDO » 1 INÍCIO N3 (PR.CARN3+DESGT.N3+PR.BAUN3+PAINEL)
+      </li>
+      <li>ENVIAR MENSAGEM » LIB KRONA</li>
+      <li>
+        GERAL » ENVIAR COMANDO » 5 FIM DE VIAGEM (AUT.CAR+DEST.BAU+AUT.DSGT)
+      </li>
+    </ul>
+  </div>
 
-    <div class="section">
-        <h3 class="toggle">BLOQUEIO / DESBLOQUEIO</h3>
-        <ul class="content">
-            <li>GERAL » ENVIAR COMANDO » TRAVAR BAÚ + BLOQUEAR VEÍCULO + LIGAR SIRENE</li>
-            <li>GERAL » ENVIAR COMANDO » LIBERAR VEÍCULO + DESLIGAR SIRENE</li>
-        </ul>
-    </div>
+  <div class="section fade-in">
+    <h3 class="toggle">BLOQUEIO / DESBLOQUEIO</h3>
+    <ul class="content">
+      <li>
+        GERAL » ENVIAR COMANDO » TRAVAR BAÚ + BLOQUEAR VEÍCULO + LIGAR SIRENE
+      </li>
+      <li>
+        GERAL » ENVIAR COMANDO » LIBERAR VEÍCULO + DESLIGAR SIRENE
+      </li>
+    </ul>
+  </div>
+  <div class="section fade-in">
+    <h3 class="toggle">PERDA DE SINAL</h3>
+    <span class="content">POSIÇÃO » PEDIDO DE POSIÇÃO AVULSO</span>
+  </div>
 
-    <div class="section">
-        <h3 class="toggle">PERDA DE SINAL</h3>
-        <span class="content">POSIÇÃO » PEDIDO DE POSIÇÃO AVULSO</span>   
-    </div>
-
-    <script src="../js/engine.js"></script>
+  <script src="../js/engine.js"></script>
 </body>
 </html>

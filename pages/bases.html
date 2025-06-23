@@ -1,62 +1,64 @@
 <!DOCTYPE html>
 <html lang="pt">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../css/style.css">
-    <title>Procedimentos Gerais</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <link rel="stylesheet" href="../css/style.css" />
+  <title>Procedimentos Gerais</title>
 </head>
 <body>
-    <div class="botoes-container">
-        <button onclick="window.location.href='../index.html'">Tecnologias</button>
-    </div>
+  <div class="botoes-container fade-in">
+    <button class="menu-btn" onclick="window.location.href='../index.html'">Tecnologias</button>
+  </div>
 
-    <div>
-        <h1>Procedimentos Básicos</h1>
+  <div>
+    <h1 class="fade-in">Procedimentos Básicos</h1>
+  </div>
+  <div id="overlay" class="overlay"></div>
+  <!-- Estrutura do Card -->
+  <div id="info-card" class="card">
+    <div class="card-content">
+      <span class="close">&times;</span>
+      <p id="card-text">Texto da informação aparecerá aqui.</p>
     </div>
+  </div>
 
-    <!-- Estrutura do Card -->
-    <div id="info-card" class="card">
-        <div class="card-content">
-            <span class="close">&times;</span>
-            <p id="card-text">Texto da informação aparecerá aqui.</p>
-        </div>
-    </div>
+  <!-- Seções com fade-in e títulos clicáveis -->
+  <div class="section fade-in">
+    <h3 class="toggle">Procedimentos</h3>
+    <ol class="content">
+      <li>BATER K1</li>
+      <li>CONFERIR PERDA DE SINAL</li>
+      <li>CONFERIR PARADA NÃO INFORMADA</li>
+      <li>CONFERIR CONFIGURAÇÃO E COMANDOS</li>
+      <li>CONFERIR ÚLTIMA MENSAGEM</li>
+      <li>CONFERIR ROTAS</li>
+      <li>FAZER RESPECTIVAS NCS</li>
+    </ol>
+  </div>
 
-    <!-- Seções com títulos clicáveis -->
-    <div class="section">
-        <h3 class="toggle">Procedimentos</h3>
-        <ol class="content">
-            <li>BATER K1</li>
-            <li>CONFERIR PERDA DE SINAL</li>
-            <li>CONFERIR PARADA NÃO INFORMADA</li>
-            <li>CONFERIR CONFIGURAÇÃO E COMANDOS</li>
-            <li>CONFERIR ÚLTIMA MENSAGEM</li>
-            <li>CONFERIR ROTAS</li>
-            <li>FAZER RESPECTIVAS NCS</li>
-        </ol>
-    </div>
+  <div class="section fade-in">
+    <h3 class="toggle">BATER BASE</h3>
+    <ul class="content">
+      <li>CONFERIR ORIGEM E DESTINO NO K1</li>
+      <li>EDITAR OBSERVAÇÃO » EDITAR » SALVAR</li>
+    </ul>
+  </div>            
 
-    <div class="section">
-        <h3 class="toggle">BATER BASE</h3>
-        <ul class="content">
-            <li>CONFERIR ORIGEM E DESTINO NO K1</li>
-            <li>EDITAR OBSERVAÇÃO » EDITAR » SALVAR</li>
-        </ul>            
-    </div>
+  <div class="section fade-in">
+    <h3 class="toggle">PERDA DE SINAL</h3>
+    <ol class="content">
+      <li>COMANDOS DE ÚLTIMA POSIÇÃO, LACRE DE BAÚ, DESENGATE E SIRENE</li>
+      <li>TENTAR CONTATO COM CONDUTOR</li>
+      <li>EM ATÉ 40 MINUTOS O VEÍCULO JÁ DEVE TER SIDO TRATADO E ENVIADO AO CTO</li>
+    </ol>
+  </div>
 
-    <div class="section">
-        <h3 class="toggle">PERDA DE SINAL</h3>
-        <ol class="content">
-            <li>COMANDOS DE ÚLTIMA POSIÇÃO, LACRE DE BAÚ, DESENGATE E SIRENE</li>
-            <li>TENTAR CONTATO COM CONDUTOR</li>
-            <li>EM ATÉ 40 MINUTOS O VEÍCULO JÁ DEVE TER SIDO TRATADO E ENVIADO AO CTO</li>
-        </ol>
-    </div>
-    <div class="section">
-        <h3 class="alert">NUNCA BLOQUEAR VEÍCULO COM PERDA DE SINAL</h3>
-    </div>
+  <div class="section fade-in">
+    <h3 class="alert">NUNCA BLOQUEAR VEÍCULO COM PERDA DE SINAL</h3>
+  </div>
 
-    <script src="../js/engine.js"></script>
-</body> 
+  <script src="../js/engine.js"></script>
+</body>
 </html>
+```
