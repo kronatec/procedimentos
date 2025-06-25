@@ -297,7 +297,7 @@ h3:hover::before {
   left: auto;
   width: 30px;
   height: 30px;
-  font-size: 24px;
+  font-size: 10px;
 }
 
 .botoes-container {
