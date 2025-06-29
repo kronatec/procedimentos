@@ -1,62 +1,95 @@
-/* Estilo global do corpo */
+/* 1. Reset e Box-Sizing */
 * {
-    max-width: 100vw;
-    box-sizing: border-box;
+  max-width: 100vw;
+  box-sizing: border-box;
 }
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+/* 2. Corpo da página */
 body {
-    font-family: Arial, Helvetica, sans-serif;
-    margin: 0;
-    padding: 10px 0px;
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center; /* Centraliza o conteúdo */
-    background-image: url('../css/images/krona.jpg');
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
-    overflow: hidden;
-    overflow-y: auto;
+  font-family: Arial, Helvetica, sans-serif;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background: url('../css/images/krona.jpg') center/cover no-repeat fixed;
+  overflow-x: hidden;
+  overflow-y: auto;
+  padding: 10px 0;
 }
 
+/* 3. Hamburger e Menu (desktop + mobile) */
+.hamburguer {
+  display: none;               /* só aparece em mobile */
+  position: fixed;
+  top: 12px;
+  right: 20px;
+  width: 35px;
+  height: 30px;
+  cursor: pointer;
+  z-index: 2001;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.hamburguer span {
+  position: absolute;
+  width: 100%;
+  height: 4px;
+  background: #00e5ff;
+  border-radius: 2px;
+  transition: 0.4s ease;
+}
+.hamburguer span:nth-child(1) { top: 0; }
+.hamburguer span:nth-child(2) { top: 13px; }
+.hamburguer span:nth-child(3) { top: 26px; }
 
+/* Transformação em “X” (escudo minimalista) */
+.hamburguer.active span:nth-child(1) {
+  transform: rotate(45deg);
+  top: 13px;
+}
+.hamburguer.active span:nth-child(2) {
+  opacity: 0;
+}
+.hamburguer.active span:nth-child(3) {
+  transform: rotate(-45deg);
+  top: 13px;
+}
 
-/* Barra de navegação transparente */
+/* Menu desktop padrão */
 .menu {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    position: fixed;
-    top: 0;
-    width: 100%;
-    height: 40px;
-    background-color: rgba(0, 0, 0, 0.5);
-    color: white;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    z-index: 1000;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 40px;
+  background-color: rgba(0, 0, 0, 0.5);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
 }
-
 .menu a {
-    text-decoration: none;
-    color: white;
-    font-size: 1rem;
-    padding: 10px 20px;
-    transition: color 0.3s ease;
+  color: white;
+  text-decoration: none;
+  font-size: 1rem;
+  padding: 10px 20px;
+  transition: color 0.3s ease;
 }
-
 .menu a:hover {
-    color: #007bff;
+  color: #007bff;
 }
 
-/* Classe para botões de menu */
+/* Botões do menu principal */
 .menu-btn {
   --btn-color: #0ff;
   position: relative;
-  display: inline-block;
   margin: 0 8px;
   padding: 12px 28px;
-  font-family: "Orbitron", sans-serif;
+  font-family: 'Orbitron', sans-serif;
   font-size: 1rem;
   text-transform: uppercase;
   letter-spacing: 1px;
@@ -66,34 +99,18 @@ body {
   border-radius: 4px;
   cursor: pointer;
   overflow: hidden;
-  transition:
-    transform 0.3s ease,
-    box-shadow 0.3s ease;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
   text-shadow:
     0 0 4px var(--btn-color),
     0 0 8px var(--btn-color);
 }
-
-/* Efeito de brilho pulsante */
-@keyframes btn-glow {
-  0%, 100% {
-    box-shadow:
-      0 0 6px var(--btn-color),
-      0 0 12px rgba(0, 255, 255, 0.5);
-  }
-  50% {
-    box-shadow:
-      0 0 12px var(--btn-color),
-      0 0 24px rgba(0, 255, 255, 0.7);
-  }
-}
-
-/* Linha fina correndo na borda */
 .menu-btn::after {
   content: "";
   position: absolute;
-  top: 0; left: -100%;
-  width: 100%; height: 100%;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
   background: linear-gradient(
     to right,
     transparent,
@@ -101,90 +118,123 @@ body {
     transparent
   );
   transform: skewX(-25deg);
-  transition: none;
 }
-
-/* Hover e foco */
 .menu-btn:hover,
 .menu-btn:focus {
   animation: btn-glow 1.5s infinite;
   transform: translateY(-3px) scale(1.05);
 }
-
 .menu-btn:hover::after,
 .menu-btn:focus::after {
   left: 100%;
   transition: left 0.6s ease-in-out;
 }
-
-
-
-
-
-/* Estilo do título principal */
-@keyframes brilho {
-    0% { text-shadow: 0px 0px 5px red; }
-    50% { text-shadow: 0px 0px 15px red; }
-    100% { text-shadow: 0px 0px 5px red; }
+@keyframes btn-glow {
+  0%,100% {
+    box-shadow:
+      0 0 6px var(--btn-color),
+      0 0 12px rgba(0,255,255,0.5);
+  }
+  50% {
+    box-shadow:
+      0 0 12px var(--btn-color),
+      0 0 24px rgba(0,255,255,0.7);
+  }
 }
 
+/* 4. Responsividade: < 768px */
+@media (max-width: 768px) {
+  .menu {
+    display: none;            /* esconde menu desktop */
+    flex-direction: column;
+    position: fixed;
+    top: 60px;
+    right: 20px;
+    background: rgba(0, 0, 0, 0.9);
+    border-radius: 8px;
+    padding: 1rem;
+    width: auto;
+  }
+  .menu.active {
+    display: flex;           /* exibe menu mobile quando ativo */
+  }
+  .menu-btn {
+    margin: 0.5rem 0;
+    padding: 0.6rem 1.2rem;
+  }
+  .hamburguer {
+    display: flex;           /* mostra hamburger em mobile */
+  }
+}
+
+/* 5. Títulos e textos */
+@keyframes brilho {
+  0%   { text-shadow: 0 0 5px red; }
+  50%  { text-shadow: 0 0 15px red; }
+ 100%  { text-shadow: 0 0 5px red; }
+}
 h1 {
-    font-size: 3rem;
-    font-weight: bold;
-    text-align: center;
-    background: linear-gradient(45deg, red, black);
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
-    animation: brilho 2s infinite alternate;
+  font-size: 3rem;
+  font-weight: bold;
+  text-align: center;
+  background: linear-gradient(45deg, red, black);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: brilho 2s infinite alternate;
 }
 h2 {
-    font-size: 1.2rem; 
-    font-weight: bold;
-    text-align: center; 
-    color: white;
-    margin-top: 20px;
-    padding: 10px;
-    background-color: rgba(0, 0, 0, 0.6); /* Fundo escuro para melhor contraste */
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4); 
+  font-size: 1.2rem;
+  font-weight: bold;
+  text-align: center;
+  color: white;
+  margin-top: 20px;
+  padding: 10px;
+  background: rgba(0,0,0,0.6);
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.4);
 }
 
+/* 6. H3 “neon toggle” */
 h3 {
   --neon-color: #0ff;
   position: relative;
-  font-family: "Orbitron", sans-serif;
+  font-family: 'Orbitron', sans-serif;
   font-size: 1.6rem;
   text-transform: uppercase;
   letter-spacing: 1px;
   color: var(--neon-color);
-  background: rgba(0, 0, 0, 0.3);
+  background: rgba(0,0,0,0.3);
   padding: 14px 28px;
   margin: 20px auto;
   max-width: 400px;
-  border: 2px solid rgba(0, 255, 255, 0.6);
+  border: 2px solid rgba(0,255,255,0.6);
   border-radius: 6px;
   box-shadow:
-    0 0 8px rgba(0, 255, 255, 0.5),
-    0 4px 16px rgba(0, 0, 0, 0.4);
-  transition:
-    transform 0.3s ease,
-    box-shadow 0.3s ease,
-    background 0.3s ease;
+    0 0 8px rgba(0,255,255,0.5),
+    0 4px 16px rgba(0,0,0,0.4);
   cursor: pointer;
   overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  animation: neonFlicker 3s infinite;
 }
-
-/* Contorno pontilhado animado */
 h3::before {
   content: "";
   position: absolute;
   top: -4px; left: -4px; right: -4px; bottom: -4px;
-  border: 1px dashed rgba(0, 255, 255, 0.4);
+  border: 1px dashed rgba(0,255,255,0.4);
   opacity: 0;
   transition: opacity 0.3s ease;
 }
-
-/* Neon flicker no texto */
+h3:hover {
+  background: rgba(0,0,0,0.6);
+  transform: translateY(-5px) scale(1.05);
+  box-shadow:
+    0 0 12px var(--neon-color),
+    0 8px 24px rgba(0,0,0,0.5);
+}
+h3:hover::before {
+  opacity: 1;
+}
 @keyframes neonFlicker {
   0%,18%,22%,25%,53%,57%,100% {
     text-shadow:
@@ -196,54 +246,34 @@ h3::before {
     text-shadow: none;
   }
 }
-h3 {
-  animation: neonFlicker 3s infinite;
-}
 
-/* Hover state */
-h3:hover {
-  background: rgba(0, 0, 0, 0.6);
-  transform: translateY(-5px) scale(1.05);
-  box-shadow:
-    0 0 12px var(--neon-color),
-    0 8px 24px rgba(0, 0, 0, 0.5);
-}
-h3:hover::before {
-  opacity: 1;
-}
-
+/* 7. Overlay e Card */
 .overlay {
   position: fixed;
-  top: 0; left: 0;
-  width: 100vw;
-  height: 100vh;
-  background: rgba(0, 0, 0, 0.75);
+  inset: 0;
+  background: rgba(0,0,0,0.75);
   backdrop-filter: blur(2px);
   opacity: 0;
   visibility: hidden;
   z-index: 1980;
   transition: opacity 0.4s ease;
 }
-
 .overlay.mostrar {
   opacity: 1;
   visibility: visible;
 }
-/* Estrutura do Card */
 .card {
   position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  display: none;                     /* esconde o card */
-  background: rgba(0, 255, 255, 0.08);
-  border: 1px solid rgba(0, 255, 255, 0.4);
+  top: 50%; left: 50%;
+  transform: translate(-50%,-50%);
+  display: none;
+  background: rgba(0,255,255,0.08);
+  border: 1px solid rgba(0,255,255,0.4);
   box-shadow:
-    0 0 8px rgba(0, 255, 255, 0.3),
-    0 0 32px rgba(0, 255, 255, 0.15),
-    inset 0 0 20px rgba(0, 255, 255, 0.1);
+    0 0 8px rgba(0,255,255,0.3),
+    0 0 32px rgba(0,255,255,0.15),
+    inset 0 0 20px rgba(0,255,255,0.1);
   backdrop-filter: blur(8px) saturate(180%);
-  -webkit-backdrop-filter: blur(8px) saturate(180%);
   color: cyan;
   padding: 40px 30px;
   border-radius: 12px;
@@ -251,190 +281,132 @@ h3:hover::before {
   animation: hologramOn 0.6s ease-out forwards;
 }
 .card.mostrar {
-    display: flex;
+  display: flex;
 }
-/* Efeito de ativação holográfico */
 @keyframes hologramOn {
-  0% {
-    transform: translate(-50%, -50%) scale(0.85) rotateX(20deg);
-    opacity: 0;
-    filter: brightness(0.5) blur(2px);
-  }
-  50% {
-    transform: translate(-50%, -50%) scale(1.02);
-    filter: brightness(1.5);
-  }
-  100% {
-    transform: translate(-50%, -50%) scale(1) rotateX(0deg);
-    opacity: 1;
-    filter: brightness(1);
-  }
+  0%   { transform: translate(-50%,-50%) scale(0.85) rotateX(20deg); opacity:0; filter: brightness(0.5) blur(2px); }
+  50%  { transform: translate(-50%,-50%) scale(1.02); filter: brightness(1.5); }
+ 100%  { transform: translate(-50%,-50%) scale(1) rotateX(0deg); opacity:1; filter: brightness(1); }
 }
-
-/* Pulso de luz sutil no contorno */
 .card::before {
   content: "";
   position: absolute;
-  top: -2px; left: -2px; right: -2px; bottom: -2px;
-  border: 1px solid rgba(0, 255, 255, 0.2);
-  pointer-events: none;
-  box-shadow: 0 0 12px rgba(0, 255, 255, 0.4);
+  inset: -2px;
+  border: 1px solid rgba(0,255,255,0.2);
+  box-shadow: 0 0 12px rgba(0,255,255,0.4);
   animation: pulseGlow 2s infinite;
   border-radius: inherit;
+  pointer-events: none;
 }
-
 @keyframes pulseGlow {
-  0%, 100% { opacity: 0.6; }
-  50% { opacity: 1; }
+  0%,100% { opacity: 0.6; }
+  50%     { opacity: 1; }
 }
-
-/* Botão de fechar */
 .close {
   position: absolute;
-  top: 12px;
-  right: 12px;
-  bottom: auto;
-  left: auto;
-  width: 30px;
-  height: 30px;
+  top: 12px; right: 12px;
+  width: 30px; height: 30px;
   font-size: 10px;
 }
 
+/* 8. Botões dinâmicos e listas */
 .botoes-container {
-    display: flex;
-    justify-content: center;
-    gap: 10px;               /* Espaço mínimo entre os botões */
-    flex-wrap: wrap;         /* Quebra linha se necessário */
-    padding: 8px 16px;       /* Reduzido para manter no topo sem muita margem */
-    margin-top: 40px;        /* Compensa a altura da barra .menu (40px) */
-    z-index: 1;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  flex-wrap: wrap;
+  padding: 8px 16px;
+  margin-top: 40px;
+  z-index: 1;
 }
-
 .botoes-container button {
-    padding: 15px 18px;             /* Menor altura e largura interna */
-    background-color: rgba(0, 0, 0, 0.85);
-    color: white;
-    font-size: 16px;               /* Texto menor */
-    border-radius: 4px;            /* Cantos menos arredondados */
-    flex: 0 0 auto;                /* Tamanho fixo conforme conteúdo */
-    width: auto;                  /* Não força largura */
-    min-width: 80px;              /* Largura mínima opcional */
-    max-width: 100%;
+  padding: 15px 18px;
+  background: rgba(0,0,0,0.85);
+  color: white;
+  font-size: 16px;
+  border-radius: 4px;
+  transition: transform 0.4s ease-in-out, background 0.3s ease;
 }
-
 .botoes-container button:hover {
-    background-color: rgba(255, 255, 255, 0.1);
-    transform: scale(1.05);
-    box-shadow: 0 6px 12px rgba(255, 255, 255, 0.3);
+  background: rgba(255,255,255,0.1);
+  transform: scale(1.07);
+  box-shadow: 0 6px 12px rgba(255,255,255,0.3);
 }
+@keyframes pulse { 0%{scale:1}50%{scale:1.07}100%{scale:1} }
 
-.check {
-    max-height: 80vh; 
-    overflow-y: auto; 
-    padding: 20px;
-}
-.check li {
-    font-weight: bold; 
-    color: white; 
-}
-
-/* Ajuste das seções */
-.section {
-    margin-bottom: 20px;
-}
-
-/* Estilo das listas */
 ul, ol {
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
+  list-style: none;
+  padding: 0;
+  margin: 0;
 }
-
 ul > li, ol > li, span {
-    background-color: rgba(0, 0, 0, 0.7);
-    color: white;
-    padding: 10px;
-    margin: 5px 0;
-    border-radius: 5px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
-    transition: background-color 0.3s ease;
+  background: rgba(0,0,0,0.7);
+  color: white;
+  padding: 10px;
+  margin: 5px 0;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+  transition: background-color 0.3s ease;
 }
-
 ul > li:hover, ol > li:hover, span:hover {
-    background-color: rgba(0, 0, 0, 0.9);
+  background: rgba(0,0,0,0.9);
 }
 
+/* 9. Toggle content e fade-in */
 .content {
   max-height: 0;
   overflow: hidden;
   opacity: 0;
   transition: all 0.4s ease;
-  display: block; /* mantém visível para animação funcionar */
+  display: block;
 }
 .toggle {
   transition: all 0.3s ease;
 }
-
 .toggle.ativo {
-  background-color: #808080;
+  background: #808080;
   color: white;
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 6px 12px rgba(0,0,0,0.3);
   transform: scale(0.98);
 }
 
-
-/* Estilo do alerta */
-.alert {
-    font-size: 1.8rem;
-    font-weight: bold;
-    text-align: center;
-    color: rgb(250, 241, 241);
-    padding: 12px;
-    background-color: rgba(255, 0, 0, 0.3); /* Vermelho translúcido */
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(255, 0, 0, 0.4);
-    animation: alertaPisca 1.5s infinite alternate; /* Efeito de piscar */
-}
-
-/* Animação de piscar */
-@keyframes alertaPisca {
-    0% { background-color: rgba(255, 0, 0, 0.5); }
-    50% { background-color: rgba(255, 0, 0, 0.9); }
-    100% { background-color: rgba(255, 0, 0, 0.5); }
-}
-
-footer {
-    background: #333;
-    color: white;
-    text-align: center;
-    padding: 10px;
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-}
-
-
-
-/* Pulso ao passar o mouse nos botões */
-@keyframes pulse {
-    0% { transform: scale(1); }
-    50% { transform: scale(1.07); }
-    100% { transform: scale(1); }
-}
-.botoes-container button:hover {
-    animation: pulse 0.4s ease-in-out;
-}
-
-/* Fade-in para títulos e seções ao rolar */
 .fade-in {
-    opacity: 0;
-    transform: translateY(20px);
-    transition: all 0.6s ease-out;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.6s ease-out;
 }
 .fade-in.active {
-    opacity: 1;
-    transform: translateY(0);
+  opacity: 1;
+  transform: translateY(0);
 }
+
+/* 10. Alertas e footer */
+.alert {
+  font-size: 1.8rem;
+  font-weight: bold;
+  text-align: center;
+  color: #faf1f1;
+  padding: 12px;
+  background: rgba(255,0,0,0.3);
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(255,0,0,0.4);
+  animation: alertaPisca 1.5s infinite alternate;
+}
+@keyframes alertaPisca {
+  0%   { background: rgba(255,0,0,0.5); }
+  50%  { background: rgba(255,0,0,0.9); }
+ 100%  { background: rgba(255,0,0,0.5); }
+}
+footer {
+  background: #333;
+  color: white;
+  text-align: center;
+  padding: 10px;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+
 
 
 @media screen and (max-width: 768px) {
@@ -460,6 +432,31 @@ footer {
         width: 90%;
         padding: 15px;
     }
+    @media screen and (max-width: 768px) {
+    .hamburguer {
+      display: flex;
+    }
+
+    .menu {
+      display: none;
+      flex-direction: column;
+      background-color: rgba(0, 0, 0, 0.9);
+      position: fixed;
+      top: 40px;
+      right: 0;
+      width: 100%;
+      padding: 10px 0;
+    }
+
+    .menu.ativo {
+      display: flex;
+    }
+
+    .menu a {
+      padding: 12px;
+      text-align: center;
+    }
+  }
     .menu {
         flex-direction: row; /* Caso seja necessário, pode alternar para um menu em coluna */
         align-items: center;
@@ -470,5 +467,10 @@ footer {
         padding: 6px;
         font-size: 0.8rem;
     }
-}
+
+    .botoes-container {
+        flex-direction: column;
+        align-items: center;
+    }
+  }
 
