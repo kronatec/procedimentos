@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/procedimentos/css/style.css">
+    <title>checkList Autotrac</title>
+</head>
+<body>
+  <div class="botoes-container return">
+    <a href="/procedimentos/pages/checklist.html" class="menu-btn">← Voltar</a>
+  </div>
+    <section class="check fade-in">
+        <h1>Checklist Autotrac</h1>
+        <ul>
+            <li>Iniciar o checklist no Krona One para sinalizar que já está sendo acompanhado</li>
+            <li>Identificar o MCT no Krona One e buscar no autotrac para ver se esta espelhado ou
+                não</li>
+            <li>Caso não esteja espelhado peça os dados ou o espelhamento para a transportador</li>
+            <li>Caso esteja espelhado vincule o veículo no conjunto de controle que você utiliza</li>
+            <li>Verifique se o OBC está ativo</li>
+            <li>Caso não esteja, envie o comando “solicitar firmware”</li>
+            <li>Após ele gerar no sistema vá até a configuração de OBC e coloque o perfil correto</li>
+            <li>Envie o comando “limpar funções logicas” e “geral conf. básica”</li>
+            <li>Entre em contato com o condutor e informe que que iremos iniciar o teste</li>
+            <li>Peça para ele ficar no veículo com tudo fechado e engatado</li>
+            <li>Envie o comando de “ativa checklist” e “inicio de viagem n3”</li>
+            <li>Peça para ele abrir uma das portas e soltar o cabo do desengate</li>
+            <li>Quando ele violar envie o comando “solicitar tabela de status” e espere chegar a
+                tabela com as violações</li>
+            <li>Após chegar peça para que ele feche a porta que abriu e engate a carreta</li>
+            <li>Quando ele fechar envie o comando “solicitar tabela de status” e espere ela
+                retornar vazia</li>
+            <li>Quando vim vazia peça para ele abrir a outra porta e caso tenha baú, a porta do
+                baú também</li>
+            <li>Quando ele violar envie o comando “solicitar tabela de status” e espere chegar a
+                tabela com as violações</li>
+            <li>Quando vim a tabela com as violações pede para ele fechar as portas “cabine e
+                baú”</li>
+            <li>Após fechar, envie o comando “solicitar tabela de status”</li>
+            <li>Quando a tabela vim vazia pode avisar o condutor que o teste foi aprovado</li>
+            <li>Envie os comandos de “desativa checklist, liberar veículo e desligar sirene,
+                autorizar carona e desengate”</li>
+            <li>Aprove o checklist no kronaone</li>
+            <li>Coloque na observação “TESTE APROVADO 00/00”</li>
+            <li>Para testar o BOTÃO DE PÂNICO, enviar o comando obrigatório “teste de botão de
+                pânico”, o condutor poderá acionar o botão por uma hora sem custo. Sempre
+                enviar o comando de teste do botão de pânico antes de pedir para o condutor
+                apertar o pânico</li>
+            <ul>
+        </ul>
+    </section>
+    <script src="/procedimentos/js/engine.js"></script>
+</body>
+</html>
