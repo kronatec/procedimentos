@@ -1,12 +1,20 @@
 document.addEventListener("DOMContentLoaded", function () {
   // Elementos principais
-  const card     = document.getElementById("info-card");
-  const overlay  = document.getElementById("overlay");
-  const closeBtn = card?.querySelector(".close");
-  const toggles  = document.querySelectorAll(".toggle");
-  const fades    = document.querySelectorAll(".fade-in");
+  const card       = document.getElementById("info-card");
+  const overlay    = document.getElementById("overlay");
+  const closeBtn   = card?.querySelector(".close");
+  const toggles    = document.querySelectorAll(".toggle");
+  const fades      = document.querySelectorAll(".fade-in");
   const hamburguer = document.querySelector(".hamburguer");
-  const menu = document.querySelector(".menu");
+  const menu       = document.querySelector(".menu");
+  // Fade-in do mockup cyberpunk
+  const mockupImg = document.querySelector('.mockup-img');
+  if (mockupImg) {
+    // espera tudo carregar, então revela
+    window.setTimeout(() => {
+      mockupImg.classList.add('visible');
+    }, 200); // 0.2s de delay pra suavizar
+  }
 
   // 1) Animação fade-in imediata
   fades.forEach((el, i) => {
@@ -53,7 +61,7 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 
-  // 5) Fechar card (botão ou overlay ou tecla Esc)
+  // 5) Fechar card (botão, overlay ou tecla Esc)
   function fechar() {
     card?.classList.remove("mostrar");
     overlay?.classList.remove("mostrar");
@@ -62,21 +70,58 @@ document.addEventListener("DOMContentLoaded", function () {
 
   closeBtn?.addEventListener("click", fechar);
   overlay?.addEventListener("click", fechar);
-
   document.addEventListener("keydown", e => {
     if (e.key === "Escape") fechar();
   });
 
-  // 6) Alternar tema (opcional)
-  const toggleThemeBtn = document.getElementById("toggle-theme");
-  toggleThemeBtn?.addEventListener("click", () => {
-    card?.classList.toggle("dark");
-    card?.classList.toggle("light");
-  });
-
-  // 7) Menu hamburguer responsivo
+  // 6) Menu hamburguer responsivo
   hamburguer?.addEventListener("click", () => {
     menu?.classList.toggle("active");
     hamburguer.classList.toggle("active");
   });
+
+  // 7) Dashboard: dados simulados por tecnologia
+  const dadosTecnologias = {
+    onix:     { viagem: 4, parado: 1 },
+    omnilink: { viagem: 2, parado: 2 },
+    sascar:   { viagem: 5, parado: 1 },
+    autotrac: { viagem: 1, parado: 3 }
+  };
+
+  function preencherPainel(dados) {
+    let totalViagem = 0;
+    let totalParado = 0;
+
+    for (const [tecnologia, valores] of Object.entries(dados)) {
+      const elViagem = document.getElementById(`${tecnologia}-viagem`);
+      const elParado = document.getElementById(`${tecnologia}-parado`);
+
+      if (elViagem) elViagem.textContent = valores.viagem;
+      if (elParado) elParado.textContent = valores.parado;
+
+      totalViagem += valores.viagem;
+      totalParado += valores.parado;
+    }
+
+    const viagemEl = document.getElementById('viagem');
+    const paradosEl = document.getElementById('parados');
+    const totalEl = document.getElementById('total');
+
+    if (viagemEl && paradosEl && totalEl) {
+      viagemEl.textContent = totalViagem;
+      paradosEl.textContent = totalParado;
+      totalEl.textContent = totalViagem + totalParado;
+    }
+
+    // Novo painel futurista: total detalhado
+    const totalViagemEl = document.getElementById('total-viagem');
+    const totalParadoEl = document.getElementById('total-parado');
+    const totalGeralEl = document.getElementById('total-geral');
+
+    if (totalViagemEl) totalViagemEl.textContent = totalViagem;
+    if (totalParadoEl) totalParadoEl.textContent = totalParado;
+    if (totalGeralEl) totalGeralEl.textContent = totalViagem + totalParado;
+  }
+
+  preencherPainel(dadosTecnologias);
 });
