@@ -195,34 +195,14 @@ main {
 }
 
 /* classe que o JS vai adicionar pra revelar o mockup */
-.mockup-img.visible {
+/* .mockup-img.visible {
   opacity: 1;
   transform: scale(1);
 }
 .mockup-container {
   position: relative;
   display: inline-block;
-}
-
-/* .mockup-ov {
-  position: absolute;
-  color: #0ff;
-  font-family: 'Orbitron', sans-serif;
-  font-weight: bold;
-  font-size: 1rem;
-  pointer-events: none;      
-  text-shadow: 0 0 4px #0ff;
 } */
-
-
-/* #onix-viagem-ov     { top: 32%;  left: 18%; }
-#onix-parado-ov     { top: 40%;  left: 18%; }
-#omni-viagem-ov     { top: 32%;  left: 33%; }
-#omni-parado-ov     { top: 40%;  left: 33%; }
-#total-viagem-ov    { top: 9%;  left: 64%; }
-#total-parado-ov    { top: 80%;  left: 20%; }
-#total-geral-ov     { top: 90%;  left: 20%; } */
-
 
 .painel-espacial {
   display: flex;
