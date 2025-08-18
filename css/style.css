@@ -21,6 +21,17 @@ body {
   padding-top: 60px;
 }
 
+#link a,
+#link a:visited,
+#link a:hover,
+#link a:active {
+  color: white;
+  text-decoration: none;
+}
+
+#link a:hover {
+  color: red;
+}
 
 
 /* 3. Hamburger e Menu */
