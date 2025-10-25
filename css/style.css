@@ -20,6 +20,28 @@ body {
   overflow-y: auto;
   padding-top: 60px;
 }
+.menu-container {
+  display: flex;
+  flex-direction: column; /* empilha os botões verticalmente */
+  align-items: center;     /* centraliza horizontalmente */
+  gap: 15px;               /* espaço entre os botões */
+  margin-top: 30px;        /* espaçamento superior */
+}
+
+.menu-btn {
+  padding: 12px 24px;
+  background-color: #007bff;
+  color: white;
+  text-decoration: none;
+  border-radius: 6px;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.menu-btn:hover {
+  background-color: #0056b3;
+}
+
 
 #link a:link,
 #link a:visited,
