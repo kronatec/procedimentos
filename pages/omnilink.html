@@ -1,111 +1,141 @@
 <!DOCTYPE html>
 <html lang="pt">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <link rel="stylesheet" href="../css/style.css" />
-  <title>Omnilink</title>
-</head>
-<body>
-  <div class="botoes-container return">
-    <a href="/procedimentos/index.html" class="menu-btn">← Voltar ao Início</a>
-  </div>
-      <button id="mostrarBtn"><h3>Ver vídeos</h3></button>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../css/style.css" />
+    <title>Omnilink</title>
+  </head>
+  <body>
+    <div class="botoes-container return">
+      <a href="/procedimentos/index.html" class="menu-btn"
+        >← Voltar ao Início</a
+      >
+    </div>
+    <button id="mostrarBtn"><h3>Ver vídeos</h3></button>
 
     <div id="videoCard">
       <h2>Vídeos Teclado Omnilink</h2>
-      <h4>Como o condutor da saída no teclado</h3>
-      <video controls src="../css/videos/Saída.mp4"></video>
-      <h4>Como condutor coloca chegada em local autorizado</h4>
-      <video controls src="../css/videos/chegada.mp4"></video>
+
+      <div class="video-row">
+        <div class="video-box">
+          <h4>Como o condutor da saída no teclado</h4>
+          <video controls src="../css/videos/Saída.mp4"></video>
+        </div>
+
+        <div class="video-box">
+          <h4>chegada em local autorizado</h4>
+          <video controls src="../css/videos/chegada.mp4"></video>
+        </div>
+
+        <div class="video-box">
+          <h4>Identificação do motorista</h4>
+          <video controls src="../css/videos/identificacao.mp4"></video>
+        </div>
+
+        <div class="video-box">
+          <h4>Ler Mensagens</h4>
+          <video controls src="../css/videos/lerMensagem.mp4"></video>
+        </div>
+
+        <div class="video-box">
+          <h4>Mensagem Formatada</h4>
+          <video controls src="../css/videos/mensagemFormatada.mp4"></video>
+        </div>
+
+      </div>
     </div>
-  <div>
-    <h1 class="fade-in">Introdução à Tecnologia Omnilink</h1>
-  </div>
-  <div id="overlay" class="overlay"></div>
-  <!-- Estrutura do Card -->
-  <div id="info-card" class="card">
-    <div class="card-content">
-      <span class="close">&times;</span>
-      <p id="card-text">Texto da informação aparecerá aqui.</p>
+
+    <div>
+      <h1 class="fade-in">Introdução à Tecnologia Omnilink</h1>
     </div>
-  </div>
+    <div id="overlay" class="overlay"></div>
+    <!-- Estrutura do Card -->
+    <div id="info-card" class="card">
+      <div class="card-content">
+        <span class="close">&times;</span>
+        <p id="card-text">Texto da informação aparecerá aqui.</p>
+      </div>
+    </div>
 
-  <!-- Seções com fade-in e títulos clicáveis -->
-  <div class="section fade-in">
-    <h3 class="toggle">PONTUAÇÃO DE VIAGEM</h3>
-    <ul class="content">
-      <li>* CLIENTE</li>
-      <li>** PERNOITE / PARADA PROGRAMADA</li>
-      <li>*** EM VIAGEM</li>
-      <li>**** PARADA ABASTECIMENTO</li>
-      <li>@ Aguardando viagem</li>
-    </ul>
-  </div>
+    <!-- Seções com fade-in e títulos clicáveis -->
+    <div class="section fade-in">
+      <h3 class="toggle">PONTUAÇÃO DE VIAGEM</h3>
+      <ul class="content">
+        <li>* CLIENTE</li>
+        <li>** PERNOITE / PARADA PROGRAMADA</li>
+        <li>*** EM VIAGEM</li>
+        <li>**** PARADA ABASTECIMENTO</li>
+        <li>@ Aguardando viagem</li>
+      </ul>
+    </div>
 
-  <div class="section fade-in">
-    <h3 class="toggle">INÍCIO DE VIAGEM OMNILINK</h3>
-    <ul class="content">
-      <li>BLOQUEAR » ATIVAR MODO INTERATIVO » INÍCIO DE VIAGEM</li>
-      <li>BLOQUEAR » LACRAR BAÚ</li>
-      <li>BLOQUEAR » LACRAR CABINE</li>
-      <li>BLOQUEAR » LACRAR CARRETA</li>
-      <li>MENSAGEM LIVRE » LIBERADO KRONA</li>
-    </ul>
-  </div>
+    <div class="section fade-in">
+      <h3 class="toggle">INÍCIO DE VIAGEM OMNILINK</h3>
+      <ul class="content">
+        <li>BLOQUEAR » ATIVAR MODO INTERATIVO » INÍCIO DE VIAGEM</li>
+        <li>BLOQUEAR » LACRAR BAÚ</li>
+        <li>BLOQUEAR » LACRAR CABINE</li>
+        <li>BLOQUEAR » LACRAR CARRETA</li>
+        <li>MENSAGEM LIVRE » LIBERADO KRONA</li>
+      </ul>
+    </div>
 
-  <div class="section fade-in">
-    <h3 class="toggle">PERNOITE 🔑</h3>
-    <span class="content">BLOQUEAR » LACRAR MOTOR</span>
-  </div>
+    <div class="section fade-in">
+      <h3 class="toggle">PERNOITE 🔑</h3>
+      <span class="content">BLOQUEAR » LACRAR MOTOR</span>
+    </div>
 
-  <div class="section fade-in">
-    <h3 class="toggle">BANHEIRO / REFEIÇÃO</h3>
-    <span class="content">DESLACRAR CABINE » CONTATO COM O CONDUTOR</span>
-  </div>
+    <div class="section fade-in">
+      <h3 class="toggle">BANHEIRO / REFEIÇÃO</h3>
+      <span class="content">DESLACRAR CABINE » CONTATO COM O CONDUTOR</span>
+    </div>
 
-  <div class="section fade-in">
-    <h3 class="toggle">BLOQUEIO / DESBLOQUEIO</h3>
-    <ul class="content">
-      <li>BLOQUEIO » CONTATO COM O CONDUTOR</li>
-      <li>BLOQUEIO » DESBLOQUEIO » EM CONTATO COM O CONDUTOR</li>
-    </ul>
-  </div>
-  <div class="section fade-in">
-    <h3 class="toggle">OCORRÊNCIA / AUTORIZAÇÃO </h3>
-    <ul class="content">
-      <li>ABAIXO DE MENSAGENS CLICAR NO <button class="botao-estrela">***
-      </button> » SELECIONE TRANSPORTADORA » FROTA » PLACA </li>
-      <li>OPERAÇÃO » AUTORIZAR OU RECUSAR</li>
-      <li>CONFERIR DATA E HORA BASEADO NO TECLADO DO CONDUTOR</li>
-      <li>DIGITAR OCORRÊNCIA FORNECIDA PELO CONDUTOR</li>
-      <li>GERAR SENHA E INFORMAR AO CONDUTOR</li>
-    </ul>
-  </div>
-  <div class="section fade-in">
-    <h3 class="toggle">OCORRÊNCIA / DESBLOQUEIO </h3>
-    <ul class="content">
-      <li>CLICAR NO <button class="cadeado">
-        🔓
-      </button>
- » SELECIONE TRANSPORTADORA » FROTA » PLACA </li>
-      <li>OPERAÇÃO » DESBLOQUEAR OU DESATIVAR</li>
-      <li>CONFERIR DATA E HORA BASEADO NO TECLADO DO CONDUTOR</li>
-      <li>DIGITAR OCORRÊNCIA FORNECIDA PELO CONDUTOR</li>
-      <li>GERAR SENHA E INFORMAR AO CONDUTOR</li>
-    </ul>
-  </div>
+    <div class="section fade-in">
+      <h3 class="toggle">BLOQUEIO / DESBLOQUEIO</h3>
+      <ul class="content">
+        <li>BLOQUEIO » CONTATO COM O CONDUTOR</li>
+        <li>BLOQUEIO » DESBLOQUEIO » EM CONTATO COM O CONDUTOR</li>
+      </ul>
+    </div>
+    <div class="section fade-in">
+      <h3 class="toggle">OCORRÊNCIA / AUTORIZAÇÃO</h3>
+      <ul class="content">
+        <li>
+          ABAIXO DE MENSAGENS CLICAR NO
+          <button class="botao-estrela">***</button> » SELECIONE TRANSPORTADORA
+          » FROTA » PLACA
+        </li>
+        <li>OPERAÇÃO » AUTORIZAR OU RECUSAR</li>
+        <li>CONFERIR DATA E HORA BASEADO NO TECLADO DO CONDUTOR</li>
+        <li>DIGITAR OCORRÊNCIA FORNECIDA PELO CONDUTOR</li>
+        <li>GERAR SENHA E INFORMAR AO CONDUTOR</li>
+      </ul>
+    </div>
+    <div class="section fade-in">
+      <h3 class="toggle">OCORRÊNCIA / DESBLOQUEIO</h3>
+      <ul class="content">
+        <li>
+          CLICAR NO <button class="cadeado">🔓</button> » SELECIONE
+          TRANSPORTADORA » FROTA » PLACA
+        </li>
+        <li>OPERAÇÃO » DESBLOQUEAR OU DESATIVAR</li>
+        <li>CONFERIR DATA E HORA BASEADO NO TECLADO DO CONDUTOR</li>
+        <li>DIGITAR OCORRÊNCIA FORNECIDA PELO CONDUTOR</li>
+        <li>GERAR SENHA E INFORMAR AO CONDUTOR</li>
+      </ul>
+    </div>
 
-  <div class="section fade-in">
-    <h3 class="toggle">CHEGADA NO CLIENTE</h3>
-    <span class="content">BLOQUEIO » DESLACRAR BAÚ</span>
-  </div>
+    <div class="section fade-in">
+      <h3 class="toggle">CHEGADA NO CLIENTE</h3>
+      <span class="content">BLOQUEIO » DESLACRAR BAÚ</span>
+    </div>
 
-  <div class="section fade-in">
-    <h3 class="toggle">FIM DE VIAGEM</h3>
-    <span class="content">BLOQUEIO » DESATIVAR » FIM DE VIAGEM</span>
-  </div>
+    <div class="section fade-in">
+      <h3 class="toggle">FIM DE VIAGEM</h3>
+      <span class="content">BLOQUEIO » DESATIVAR » FIM DE VIAGEM</span>
+    </div>
 
-  <script src="../js/engine.js"></script>
-</body>
+    <script src="../js/engine.js"></script>
+  </body>
 </html>
