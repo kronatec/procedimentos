@@ -92,6 +92,7 @@ body {
   transform: translateY(-50%) rotate(-40deg);
 }
 
+
 .botao-estrela {
   font-size: 24px;
   padding: 3px 8px;
@@ -104,6 +105,26 @@ body {
 
 .botao-estrela:hover {
   background-color: #444;
+}
+
+button {
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+#videoCard {
+  display: none;
+  border: 1px solid #ccc;
+  padding: 20px;
+  margin-top: 20px;
+  background-color: #fff;
+}
+
+video {
+  width: 100%;
+  max-width: 500px;
+  margin-bottom: 10px;
 }
 
 .cadeado {
