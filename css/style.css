@@ -112,13 +112,16 @@ button {
   font-size: 16px;
   cursor: pointer;
 }
-
+#mostrarBtn {
+  background-color: transparent;
+  border: none;
+}
 #videoCard {
   display: none;
   border: 1px solid #ccc;
   padding: 20px;
   margin-top: 20px;
-  background-color: #fff;
+  background-color: #8f0404;
 }
 
 video {
