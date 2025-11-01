@@ -20,6 +20,10 @@ body {
   overflow-y: auto;
   padding-top: 60px;
 }
+
+h4 {
+  color: white;
+}
 .menu-container {
   display: flex;
   flex-direction: column; /* empilha os botões verticalmente */
