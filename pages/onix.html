@@ -1,75 +1,91 @@
 <!DOCTYPE html>
 <html lang="pt">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <link rel="stylesheet" href="../css/style.css" />
-  <title>Onix</title>
-</head>
-<body>
-  <div class="botoes-container return">
-    <a href="/procedimentos/index.html" class="menu-btn">← Voltar ao Início</a>
-  </div>
-
-  <div>
-    <h1 class="fade-in">Introdução à Tecnologia Onix</h1>
-  </div>
-  <div id="overlay" class="overlay"></div>
-  <!-- Estrutura do Card -->
-  <div id="info-card" class="card">
-    <div class="card-content">
-      <span class="close">&times;</span>
-      <p id="card-text">Texto da informação aparecerá aqui.</p>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../css/style.css" />
+    <title>Onix</title>
+  </head>
+  <body>
+    <div class="botoes-container return">
+      <a href="/procedimentos/index.html" class="menu-btn"
+        >← Voltar ao Início</a
+      >
     </div>
-  </div>
+    <button id="mostrarBtn"><h3>Ver vídeos</h3></button>
+    <div id="videoCard">
+      <h2>Vídeos Teclado Onix</h2>
+      
+      <div class="video-row">
+        <div class="video-box">
+          <h4>Teclado Onix</h4>
+          <video controls src="../css/videos/onix/teclado_onix.mp4"></video>
+        </div>
+        <div class="video-box">
+          <h4>Teclado de mensagens</h4>
+          <video controls src="../css/videos/onix/teclado_mensagens.mp4"></video>
+        </div>
+      </div>
+    </div>
+    <div>
+      <h1 class="fade-in">Introdução à Tecnologia Onix</h1>
+    </div>
+    <div id="overlay" class="overlay"></div>
+    <!-- Estrutura do Card -->
+    <div id="info-card" class="card">
+      <div class="card-content">
+        <span class="close">&times;</span>
+        <p id="card-text">Texto da informação aparecerá aqui.</p>
+      </div>
+    </div>
 
-  <!-- Seções com fade-in e títulos clicáveis -->
-  <div class="section fade-in">
-    <h3 class="toggle">PONTUAÇÃO DE VIAGEM</h3>
-    <ul class="content">
-      <li>.AG51 (ORIGEM X DESTINO)</li>
-      <li>..51 EM VIAGEM</li>
-      <li>..52 PERNOITE / PARADA PROGRAMADA</li>
-      <li>&nbsp;.60 CHEGADA NO CLIENTE</li>
-      <li>...57 PARADA ABASTECIMENTO / PF</li>
-    </ul>
-  </div>
+    <!-- Seções com fade-in e títulos clicáveis -->
+    <div class="section fade-in">
+      <h3 class="toggle">PONTUAÇÃO DE VIAGEM</h3>
+      <ul class="content">
+        <li>.AG51 (ORIGEM X DESTINO)</li>
+        <li>..51 EM VIAGEM</li>
+        <li>..52 PERNOITE / PARADA PROGRAMADA</li>
+        <li>&nbsp;.60 CHEGADA NO CLIENTE</li>
+        <li>...57 PARADA ABASTECIMENTO / PF</li>
+      </ul>
+    </div>
 
-  <div class="section fade-in">
-    <h3 class="toggle">COMANDO INÍCIO DE VIAGEM</h3>
-    <ul class="content">
-      <li>HABILITAR SENSOR DE VIOLAÇÃO DE PAINEL</li>
-      <li>HABILITAR SENSOR DE VIOLAÇÃO DE PORTA DO MOTORISTA</li>
-      <li>HABILITAR SENSOR DE VIOLAÇÃO DE PORTA DO CARONA</li>
-      <li>DESABILITAR BOTÃO DE ABERTURA DE TRAVA DO BAÚ</li>
-      <li>MENSAGEM PREENCHÍVEL &gt; ENVIAR "LIBERADO KRONA"</li>
-    </ul>
-  </div>
-    
-  <div class="section fade-in">
-    <h3 class="toggle">COMANDO FIM DE VIAGEM</h3>
-    <ul class="content">
-      <li>DESABILITAR SENSOR DE VIOLAÇÃO DE PAINEL</li>
-      <li>DESABILITAR SENSOR DE VIOLAÇÃO DE PORTA DO MOTORISTA</li>
-      <li>DESABILITAR SENSOR DE VIOLAÇÃO DE PORTA DO CARONA</li>
-      <li>HABILITAR BOTÃO DE ABERTURA DE TRAVA DO BAÚ</li>
-      <li>FINALIZAR NO K1</li>
-    </ul>
-  </div>
+    <div class="section fade-in">
+      <h3 class="toggle">COMANDO INÍCIO DE VIAGEM</h3>
+      <ul class="content">
+        <li>HABILITAR SENSOR DE VIOLAÇÃO DE PAINEL</li>
+        <li>HABILITAR SENSOR DE VIOLAÇÃO DE PORTA DO MOTORISTA</li>
+        <li>HABILITAR SENSOR DE VIOLAÇÃO DE PORTA DO CARONA</li>
+        <li>DESABILITAR BOTÃO DE ABERTURA DE TRAVA DO BAÚ</li>
+        <li>MENSAGEM PREENCHÍVEL &gt; ENVIAR "LIBERADO KRONA"</li>
+      </ul>
+    </div>
 
-  <div class="section fade-in">
-    <h3 class="toggle">BLOQUEIO / DESBLOQUEIO</h3>
-    <ul class="content">
-      <li>LIGAR BLOQUEIO &gt; LIGAR SIRENE</li>
-      <li>DESLIGAR BLOQUEIO &gt; DESLIGAR SIRENE</li>
-    </ul>
-  </div>
+    <div class="section fade-in">
+      <h3 class="toggle">COMANDO FIM DE VIAGEM</h3>
+      <ul class="content">
+        <li>DESABILITAR SENSOR DE VIOLAÇÃO DE PAINEL</li>
+        <li>DESABILITAR SENSOR DE VIOLAÇÃO DE PORTA DO MOTORISTA</li>
+        <li>DESABILITAR SENSOR DE VIOLAÇÃO DE PORTA DO CARONA</li>
+        <li>HABILITAR BOTÃO DE ABERTURA DE TRAVA DO BAÚ</li>
+        <li>FINALIZAR NO K1</li>
+      </ul>
+    </div>
 
-  <div class="section fade-in">
-    <h3 class="toggle">PERDA DE SINAL</h3>
-    <span class="content">Última Posição</span>
-  </div>
+    <div class="section fade-in">
+      <h3 class="toggle">BLOQUEIO / DESBLOQUEIO</h3>
+      <ul class="content">
+        <li>LIGAR BLOQUEIO &gt; LIGAR SIRENE</li>
+        <li>DESLIGAR BLOQUEIO &gt; DESLIGAR SIRENE</li>
+      </ul>
+    </div>
 
-  <script src="../js/engine.js"></script>
-</body>
+    <div class="section fade-in">
+      <h3 class="toggle">PERDA DE SINAL</h3>
+      <span class="content">Última Posição</span>
+    </div>
+
+    <script src="../js/engine.js"></script>
+  </body>
 </html>
