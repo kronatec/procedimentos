@@ -1,0 +1,245 @@
+/* Fundo natalino só na home */
+body {
+  background: url('/procedimentos/css/images/fundo-natal.png.png') no-repeat center center fixed;
+  background-size: cover;
+  color: #fff;
+}
+html, body {
+  height: 100%;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  flex: 1;
+}
+
+footer.natalino {
+  margin-top: auto;
+}
+
+/* Título principal natalino */
+h1 {
+  font-size: 3rem;
+  font-weight: bold;
+  text-align: center;
+  background: linear-gradient(45deg, #b30000, #FFD700);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: brilhoNatal 2s infinite alternate;
+}
+
+/* Animação de brilho no texto */
+@keyframes brilhoNatal {
+  from { text-shadow: 0 0 10px #FFD700; }
+  to { text-shadow: 0 0 20px #b30000; }
+}
+
+/* Menu com luzes piscando */
+nav.menu {
+  border-bottom: 3px solid #FFD700;
+  box-shadow: 0 0 10px #b30000, 0 0 20px #006400;
+  animation: piscaLuzes 2s infinite alternate;
+}
+@keyframes piscaLuzes {
+  from { box-shadow: 0 0 10px #FFD700; }
+  to { box-shadow: 0 0 20px #b30000, 0 0 25px #006400; }
+}
+
+/* Botões natalinos */
+.menu-btn {
+  background: linear-gradient(45deg, #b30000, #006400);
+  color: #fff;
+  border: 2px solid #FFD700;
+  border-radius: 8px;
+  padding: 10px 20px;
+  transition: transform 0.3s ease;
+}
+.menu-btn:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 15px #FFD700;
+}
+
+/* Flocos de neve caindo */
+.snowflake {
+  position: fixed;
+  top: -10px;
+  color: #fff;
+  font-size: 1.2em;
+  animation: snow linear infinite;
+  opacity: 0.9;
+  z-index: 9999;
+}
+
+/* Animação de queda com leve vento */
+@keyframes snow {
+  0%   { transform: translateY(0) translateX(0); opacity: 1; }
+  50%  { transform: translateY(50vh) translateX(20px); opacity: 0.8; }
+  100% { transform: translateY(100vh) translateX(-20px); opacity: 0; }
+}
+
+/* Variações para dar naturalidade */
+.snowflake:nth-child(1) { left: 5%;  animation-duration: 8s;  animation-delay: 0s;  font-size: 1.5em; }
+.snowflake:nth-child(2) { left: 15%; animation-duration: 10s; animation-delay: 2s;  font-size: 1.2em; }
+.snowflake:nth-child(3) { left: 25%; animation-duration: 12s; animation-delay: 4s;  font-size: 1.8em; }
+.snowflake:nth-child(4) { left: 35%; animation-duration: 9s;  animation-delay: 1s;  font-size: 1.3em; }
+.snowflake:nth-child(5) { left: 45%; animation-duration: 11s; animation-delay: 3s;  font-size: 1.6em; }
+.snowflake:nth-child(6) { left: 55%; animation-duration: 13s; animation-delay: 5s;  font-size: 1.4em; }
+.snowflake:nth-child(7) { left: 65%; animation-duration: 9s;  animation-delay: 2s;  font-size: 1.7em; }
+.snowflake:nth-child(8) { left: 75%; animation-duration: 10s; animation-delay: 4s;  font-size: 1.3em; }
+.snowflake:nth-child(9) { left: 85%; animation-duration: 12s; animation-delay: 1s;  font-size: 1.5em; }
+.snowflake:nth-child(10){ left: 95%; animation-duration: 14s; animation-delay: 3s;  font-size: 1.2em; }
+
+/* Banner natalino */
+.banner-natal {
+  background: linear-gradient(135deg, #b30000, #006400);
+  color: #fff;
+  text-align: center;
+  padding: 40px 20px;
+  border-bottom: 4px solid #FFD700;
+  border-radius: 12px;
+  box-shadow: 0 0 20px #FFD700;
+  position: relative;
+  animation: guirlandaPisca 3s infinite alternate;
+}
+
+.banner-natal h1 {
+  font-size: 3rem;
+  font-weight: bold;
+  background: linear-gradient(45deg, #FFD700, #fff);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 2px 2px 10px #b30000;
+  animation: brilhoNatal 2s infinite alternate;
+}
+
+.banner-natal p {
+  font-size: 1.2rem;
+  margin-top: 10px;
+  color: #fff;
+  text-shadow: 1px 1px 5px #006400;
+}
+
+/* Flocos de neve decorativos no banner */
+.banner-natal::before {
+  content: "❄ ❅ ❆";
+  position: absolute;
+  top: 10px;
+  left: 20px;
+  font-size: 2rem;
+  opacity: 0.8;
+}
+.banner-natal::after {
+  content: "❆ ❅ ❄";
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  font-size: 2rem;
+  opacity: 0.8;
+}
+
+/* Luzes piscando em volta do banner */
+@keyframes guirlandaPisca {
+  0%   { box-shadow: 0 0 15px #FFD700, 0 0 25px #b30000, 0 0 35px #006400; }
+  50%  { box-shadow: 0 0 20px #FFD700, 0 0 30px #006400, 0 0 40px #b30000; }
+  100% { box-shadow: 0 0 25px #FFD700, 0 0 35px #b30000, 0 0 45px #006400; }
+}
+
+footer.natalino {
+  background: linear-gradient(90deg, #b30000, #006400);
+  color: #fff;
+  text-align: center;
+  padding: 20px;
+  border-top: 4px solid #FFD700;
+  position: relative;
+  box-shadow: 0 0 15px #FFD700;
+  animation: luzesRodape 3s infinite alternate;
+}
+
+footer.natalino a {
+  color: #FFD700;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+footer.natalino a:hover {
+  color: #fff;
+  text-shadow: 0 0 10px #FFD700;
+}
+
+/* Ícones decorativos */
+footer.natalino::before {
+  content: "🎄 🎁 ✨";
+  position: absolute;
+  left: 20px;
+  top: 10px;
+  font-size: 1.5rem;
+}
+
+footer.natalino::after {
+  content: "✨ 🎁 🎄";
+  position: absolute;
+  right: 20px;
+  top: 10px;
+  font-size: 1.5rem;
+}
+
+/* Luzes piscando */
+@keyframes luzesRodape {
+  0%   { box-shadow: 0 0 15px #FFD700, 0 0 25px #b30000; }
+  50%  { box-shadow: 0 0 20px #006400, 0 0 30px #FFD700; }
+  100% { box-shadow: 0 0 25px #b30000, 0 0 35px #006400; }
+}
+
+footer.natalino {
+  background: linear-gradient(90deg, #b30000, #006400);
+  color: #fff;
+  text-align: center;
+  padding: 40px 20px;
+  border-top: 4px solid #FFD700;
+  position: relative;
+  overflow: hidden; /* importante para limitar neve dentro do rodapé */
+  border-radius: 8px 8px 0 0;
+  box-shadow: 0 0 15px #FFD700;
+  animation: luzesRodape 3s infinite alternate;
+}
+
+footer.natalino a {
+  color: #FFD700;
+  text-decoration: none;
+  font-weight: bold;
+}
+footer.natalino a:hover {
+  color: #fff;
+  text-shadow: 0 0 10px #FFD700;
+}
+
+/* Flocos de neve dentro do rodapé */
+footer.natalino .snowflake {
+  position: absolute;
+  top: -10px;
+  color: #fff;
+  font-size: 1.2em;
+  animation: snowRodape linear forwards;
+  opacity: 0.9;
+}
+
+@keyframes snowRodape {
+  0%   { transform: translateY(0) translateX(0); opacity: 1; }
+  50%  { transform: translateY(50%) translateX(20px); opacity: 0.8; }
+  100% { transform: translateY(100%) translateX(-20px); opacity: 0; }
+}
+
+/* Luzes piscando */
+@keyframes luzesRodape {
+  0%   { box-shadow: 0 0 15px #FFD700, 0 0 25px #b30000; }
+  50%  { box-shadow: 0 0 20px #006400, 0 0 30px #FFD700; }
+  100% { box-shadow: 0 0 25px #b30000, 0 0 35px #006400; }
+}
+@keyframes snowRodape {
+  0%   { transform: translateY(0) translateX(0); opacity: 1; }
+  50%  { transform: translateY(50%) translateX(var(--vento)); opacity: 0.8; }
+  100% { transform: translateY(100%) translateX(calc(var(--vento) * -1)); opacity: 0; }
+}
+
