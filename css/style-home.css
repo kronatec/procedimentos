@@ -302,6 +302,7 @@ footer.natalino .snowflake {
   }
 }
 
+
 @media (max-width: 480px) {
   h1, .banner-natal h1 {
     font-size: 1.6rem;
@@ -323,5 +324,17 @@ footer.natalino .snowflake {
   .menu-btn {
     width: 100%;
     font-size: 0.85rem;
+  }
+}
+@media (max-width: 600px) {
+  .tooltip {
+    position: fixed;       /* fixa na tela */
+    top: 20px;             /* aparece no topo */
+    left: 50%;             /* centraliza horizontalmente */
+    transform: translateX(-50%);
+    max-width: 90%;        /* evita cortar nas laterais */
+    text-align: center;
+    white-space: normal;   /* permite quebra de linha */
+    font-size: 1rem;
   }
 }
