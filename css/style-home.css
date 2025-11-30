@@ -243,3 +243,63 @@ footer.natalino .snowflake {
   100% { transform: translateY(100%) translateX(calc(var(--vento) * -1)); opacity: 0; }
 }
 
+
+
+/* Media Queries */
+@media (max-width: 1024px) {
+  h1, .banner-natal h1 {
+    font-size: 2.5rem;
+  }
+  .banner-natal p {
+    font-size: 1rem;
+  }
+  .menu-btn {
+    padding: 8px 16px;
+    font-size: 0.95rem;
+  }
+}
+
+@media (max-width: 768px) {
+  h1, .banner-natal h1 {
+    font-size: 2rem;
+  }
+  .banner-natal {
+    padding: 30px 15px;
+  }
+  .banner-natal p {
+    font-size: 0.9rem;
+  }
+  nav.menu {
+    font-size: 0.9rem;
+    text-align: center;
+  }
+  .menu-btn {
+    display: block;
+    margin: 10px auto;
+    width: 80%;
+  }
+}
+
+@media (max-width: 480px) {
+  h1, .banner-natal h1 {
+    font-size: 1.6rem;
+  }
+  .banner-natal {
+    padding: 20px 10px;
+  }
+  .banner-natal p {
+    font-size: 0.8rem;
+  }
+  footer.natalino {
+    padding: 20px 10px;
+    font-size: 0.8rem;
+  }
+  footer.natalino::before,
+  footer.natalino::after {
+    display: none; /* remove ícones decorativos em telas muito pequenas */
+  }
+  .menu-btn {
+    width: 100%;
+    font-size: 0.85rem;
+  }
+}
